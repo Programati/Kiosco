@@ -1,0 +1,40 @@
+:root{
+    --verde: #00A149;
+    --balanco: #fff;
+    --rojo: #881014;
+    --oscuro: #000;
+    --titulos:'Arima Madurai', cursive;
+    --parrafos:'Mulish', sans-serif;
+}
+
+/* reseteamos el BOX-SIZING
+tanto en todo el HTML y a todos los elementos que tengan pseudo elementos*/
+html{
+    box-sizing: border-box;/*Que respete el valor calculado de un contenedor PADRE*/
+    /* font-size: 62.5%; */
+    font-size: 10px;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+/*Tanto en el HTML como en los pseudo elementos hay que resetear el BOX-SIZING
+De este modo mi caja padre no crece, respeta mis definiciones de alto y ancho sin desbordar*/
+
+body{
+    font-size: 1.6rem;
+}
+/*GLOBALES*/
+.contenedor{
+    max-width: 120rem;/*Maximo 1200px*/
+    margin: 0 auto;/*Que no tenga margenes arriba ni abajo, en los costados AUTOMATICO*/
+    width: 95%;/*Que el ancho sea el 95% total, para que tenga un pequeño borde en la IZQUIERDA y en la DERECHA*/
+}
+/*ENCABEZADO*/
+.contenedor-navegacion{
+    background-color: var(--oscuro);
+}
+.contenido-navegacion{
+    display: flex; /*centramos a todo el contenido del div padre de IZQUIERA A DERECHA*/
+    align-items: center; /*Centramos de manera vertical todos los elementos del div padre*/
+    justify-content: space-between;
+}
